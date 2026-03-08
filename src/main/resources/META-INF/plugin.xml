@@ -2,7 +2,7 @@
 <idea-plugin>
     <id>com.biedin.markdown.commenter</id>
     <name>Markdown commenter</name>
-    <vendor>JetBrains</vendor>
+    <vendor>biedin</vendor>
 
     <depends>org.intellij.plugins.markdown</depends>
 

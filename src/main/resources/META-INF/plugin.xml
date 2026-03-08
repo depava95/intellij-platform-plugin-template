@@ -1,15 +1,19 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
-    <name>IntelliJ Platform Plugin Template</name>
+    <id>com.biedin.markdown.commenter</id>
+    <name>Markdown commenter</name>
     <vendor>JetBrains</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+    <depends>org.intellij.plugins.markdown</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="org.jetbrains.plugins.template.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="org.jetbrains.plugins.template.startup.MyProjectActivity" />
-    </extensions>
+    <actions>
+        <action id="org.jetbrains.plugins.template.actions.AddMarkdownCommentAction"
+                class="org.jetbrains.plugins.template.actions.AddMarkdownCommentAction"
+                text="Add Markdown Comment"
+                description="Add a comment to the selected Markdown text">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
